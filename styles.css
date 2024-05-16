@@ -1,41 +1,100 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; /* Semibold */
+    margin: 0;
+    padding: 0;
 }
 
-header {
-  text-align: center;
-  padding: 50px;
-  background-color: #f2f2f2;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-header h1 {
-  font-size: 2em;
+/* Header Styles */
+.header {
+    background-image: url('images/sitebanner.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Cover the entire header with the background image */
+    background-position: center; /* Center the background image */
+    color: #3D52A0; /* Text color */
+    text-align: center;
+    padding: 350px;
 }
 
-.cta {
-  text-align: center;
-  padding: 50px 0;
+
+.site-banner h1,
+.site-banner p,
+.section-title,
+.sidebar-title,
+.sidebar ul li a,
+.footer {
+    font-weight: 600; /* Semibold */
 }
 
-.cta button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Main Content Styles */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.cta button:hover {
-  background-color: #0056b3;
+.section {
+    flex-basis: calc(33.33% - 20px); /* Each section takes up one-third of the available space */
+    margin-bottom: 20px;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
+.section-title {
+    color: #8697C4;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.embed-container {
+    background-color: #7091E6;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #ADBBD;
+    color: #3D52A0;
+    padding: 20px;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -250px;
+    transition: right 0.3s ease-in-out;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #8697C4;
+    color: #3D52A0;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Language Toggle Styles */
+.language-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Google Analytics Placeholder */
+
+/* Adjust layout for specific sections */
+.calendar-section,
+.quiz-section,
+.instagram-section {
+    flex-basis: calc(33.33% - 20px);
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-basis: calc(50% - 20px); /* Each section takes up half of the available space on smaller screens */
+    }
 }
